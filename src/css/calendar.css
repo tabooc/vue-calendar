@@ -1,0 +1,78 @@
+@charset "utf-8";
+
+.demo {
+    margin: 0 auto;
+    width: 420px;
+}
+
+/**
+ * 日历
+*/
+
+.plain-calendar {
+    font-size: 14px;
+    text-align: center;
+}
+
+.plain-calendar__hd {
+    position: relative;
+    height: 48px;
+    text-align: center;
+    line-height: 48px;
+    background-color: #ff764f;
+    color: #fff;
+    font-size: 18px;
+}
+
+.plain-calendar__hd-text {
+    display: inline-block;
+    margin: 0 30px;
+}
+
+.plain-calendar__prev,
+.plain-calendar__next {
+    display: inline-block;
+    width: 80px;
+    height: 100%;
+}
+
+.plain-calendar__week {
+    height: 40px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.plain-calendar__week-item {
+    flex: 1;
+    height: 40px;
+    line-height: 40px;
+}
+
+.plain-calendar__date-items {
+    padding: 0;
+    margin: 0;
+}
+
+.plain-calendar__date-item {
+    display: inline-block;
+    width: 14.2%;
+    height: 40px;
+    line-height: 40px;
+    list-style-type: none;
+}
+
+.plain-calendar__now {
+    color: #fff;
+    background-color: #ff764f;
+}
+
+.plain-calendar__selected {
+    color: #fff;
+    background: #39c3a9;
+}
+
+.plain-calendar__other-month {
+    color: #b7b7b7;
+}

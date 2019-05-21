@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>vue简洁日历组件</title>
+    <link rel="stylesheet" href="./css/calendar.css">
+</head>
+
+<body>    
+    <div class="main" id="main">
+        <div class="demo">
+            <calendar :callback="selecteDate"></calendar>
+        </div>
+    </div>
+    <script type="text/x-template" id="calendar">
+        <div class="plain-calendar">
+            <!-- 选中的年月 -->
+            <div class="plain-calendar__hd">
+                <span class="plain-calendar__prev" @click="pickPre(currentYear,currentMonth)">❮</span>
+                <span class="plain-calendar__hd-text">{{currentYear}}年 {{currentMonth}}月</span>
+                <span class="plain-calendar__next" @click="pickNext(currentYear,currentMonth)">❯</span>
+            </div>
+            <!-- /选中的年月 -->
+            <!-- 星期 -->
+            <ul class="plain-calendar__week">
+                <li class="plain-calendar__week-item" v-for="week in weekArray">{{week}}</li>
+            </ul>
+            <!-- /星期 -->
+            <!-- /日期 -->
+            <ul class="plain-calendar__date-items">
+                <li v-for="item in dates" class="plain-calendar__date-item" :class="setClassName(item)" @click="selDate(item,$event)">{{item.day.getDate()}}</li>
+            </ul>
+        </div>
+    </script>
+    <script src="./js/vue.js"></script>
+    <script src="./js/vue-calendar.js"></script>
+    <script>
+        var vm = new Vue({
+            el: '#main',
+            methods: {
+                selecteDate(date,dateObject){
+                    console.log(date)
+                    console.log(dateObject);
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

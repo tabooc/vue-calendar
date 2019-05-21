@@ -1,0 +1,10 @@
+# ---
+dist
+nbproject
+.settings
+.project
+.vscode
+.idea
+.DS_Store
+_MACOSX
+node_modules
