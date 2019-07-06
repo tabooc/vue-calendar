@@ -68,11 +68,15 @@
     background-color: #ff764f;
 }
 
+.plain-calendar__other-month {
+    color: #b7b7b7;
+}
+
+.plain-calendar__date_dis {
+    color: #b7b7b7;
+}
+
 .plain-calendar__selected {
     color: #fff;
     background: #39c3a9;
-}
-
-.plain-calendar__other-month {
-    color: #b7b7b7;
 }

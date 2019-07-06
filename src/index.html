@@ -9,10 +9,10 @@
     <link rel="stylesheet" href="./css/calendar.css">
 </head>
 
-<body>    
+<body>
     <div class="main" id="main">
         <div class="demo">
-            <calendar :callback="selecteDate"></calendar>
+            <calendar :callback="selecteDate" date="2019-07-06" min="2019-07-05" max="2019-07-26"></calendar>
         </div>
     </div>
     <script type="text/x-template" id="calendar">
@@ -41,9 +41,12 @@
         var vm = new Vue({
             el: '#main',
             methods: {
-                selecteDate(date,dateObject){
-                    console.log(date)
-                    console.log(dateObject);
+                selecteDate(date,dateObject,state){
+                    if(state == 'disabled'){
+                        console.log(date);
+                    }else{
+                        console.log('%c' + date + ',' + dateObject.day.getTime(),'color:white;background:green;padding:0 5px;font-size:18px')
+                    }
                 }
             }
         })
